@@ -9,7 +9,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: VITE_GEMINI_API_KEY
-        fromDatabase: false
         generateValue: false
     healthCheckPath: /
     staticPublishPath: ./dist
