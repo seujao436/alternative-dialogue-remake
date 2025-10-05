@@ -3,8 +3,8 @@ services:
     name: alternative-dialogue-remake
     env: node
     plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm run preview
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -12,4 +12,4 @@ services:
       # Environment Variables -> Add Environment Variable
       # Nome: VITE_GEMINI_API_KEY
       # Valor: sua_chave_api_do_gemini
-    healthCheckPath: /
+    healthCheckPath: /health
