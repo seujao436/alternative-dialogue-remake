@@ -13,4 +13,3 @@ services:
       # Nome: VITE_GEMINI_API_KEY
       # Valor: sua_chave_api_do_gemini
     healthCheckPath: /
-    staticPublishPath: ./dist
