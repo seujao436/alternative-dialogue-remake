@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: dialogue-gemini-teste
+    name: alternative-dialogue-remake
     env: node
     plan: free
     buildCommand: npm install && npm run build
@@ -8,7 +8,9 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: VITE_GEMINI_API_KEY
-        generateValue: false
+      # VITE_GEMINI_API_KEY deve ser configurada manualmente no painel do Render
+      # Environment Variables -> Add Environment Variable
+      # Nome: VITE_GEMINI_API_KEY
+      # Valor: sua_chave_api_do_gemini
     healthCheckPath: /
     staticPublishPath: ./dist
